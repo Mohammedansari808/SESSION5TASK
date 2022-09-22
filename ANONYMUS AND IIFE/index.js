@@ -189,16 +189,16 @@ findDuplicates()
 
 //IIFE
 let numdo = [11,12,13,14,12,15,14]
-let numdop=[...numdo].sort()
-let duplicates2 =[]
+let val=[...numdo].sort()
 
-// (()=>{
-//     for (let j=0 ;i<numdop.length;i++){
-//         if (numdop[i]==numdop[i+1]){
-//             duplicates2.push(numdop[i])
-//         }
-//     }console.log(duplicates2)
-// })()
+let duplicates2=" ";
+(function(){
+    for (let i =0 ;i<val.length;i++){
+    if (val[i]==val[i + 1]){
+        duplicates2+=" " +(val[i])
+        
+    }
+}console.log(duplicates2.trim().split(" ").map(Number))})()
 //ANONYMOUS FUNCTION
 let variable = [1,2,3,4]
 let k=1
@@ -212,15 +212,16 @@ let rotate=function(){
 }
 rotate()
 
-// let variable2= [1,2,3,4]
-// let K=2
-// (function(){
-//     for (let l=0;i<K;l++){
-//         let knites= variable2.pop()
-//         variable2.unshift(knite)
+// IIFE
+let variable2= [1,2,3,4]
+let K=2
+let rotat =(function(){
+    for (let l=0;l<K;l++){
+        let knites= variable2.pop()
+        variable2.unshift(knites)
         
-//     }console.log(variable2)
+    }console.log(variable2)
     
-// })()
+})()
 
 
